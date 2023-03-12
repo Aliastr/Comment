@@ -1,0 +1,52 @@
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <title>Comments</title>
+</head>
+<body>
+    <head>
+        <div>
+            <div class="commTitle">
+                <h1>Комментарии</h1>
+            </div>
+        </div>
+    </head>
+    <main>
+        <div class="flexComm">
+            <div class="commMessage">
+                <form name="addComment" onsubmit="return addComments(this)">
+                    <label for="addMsg">Введите комментарий</label>
+                    <textarea name="addComm" cols="30" rows="10" id="addMsg" placeholder=""></textarea>
+                    <div id="errMsg"></div>
+                    <div class="setMsg">
+                        <div>
+                            <label for="addName">Введите имя</label>
+                            <input type="text" id="addName">
+                            <div id="errName"></div>
+                        </div>
+                        <div>
+                            <input type="datetime-local" id="addDate">
+                        </div>
+                        <div>
+                            <input type="submit" value="Отправить">              
+                        </div>    
+                    </div>
+                </form>
+            </div>
+            <div class="commArea" id="commArea">
+            </div>
+        </div>
+    </main>
+
+    <script src="scrypts/scrypt.js"></script>
+</body>
+</html>
